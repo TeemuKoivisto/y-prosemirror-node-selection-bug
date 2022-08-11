@@ -1,6 +1,5 @@
 import { EditorState, Plugin } from 'prosemirror-state'
 import { EditorView } from 'prosemirror-view'
-import { exampleSetup } from 'prosemirror-example-setup'
 import { applyDevTools } from 'prosemirror-dev-toolkit'
 
 import * as commands from './commands'
@@ -9,7 +8,11 @@ import { EquationView } from './EquationView'
 import { PopperProvider } from './PopperProvider'
 
 import docJson from './doc.json'
+
+import 'katex/dist/katex.min.css'
 import './index.css'
+import './prosemirror.css'
+import './popper.css'
 
 export function main(plugins: Plugin[]) {
   const popper = new PopperProvider()

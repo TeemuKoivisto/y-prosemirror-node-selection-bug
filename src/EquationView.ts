@@ -5,8 +5,6 @@ import { EditorView as CodeMirrorView, placeholder } from '@codemirror/view'
 import { EditorState } from '@codemirror/state'
 import katex from 'katex'
 
-import 'katex/dist/katex.min.css'
-import './popper.css'
 import { PopperProvider } from './PopperProvider'
 
 export class EquationView implements NodeView {
