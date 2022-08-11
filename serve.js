@@ -5,7 +5,7 @@ const http = require('http'),
   url = require('url'),
   path = require('path'),
   fs = require('fs'),
-  folder = process.argv[2] || 'static',
+  folder = process.argv[2] || 'dist',
   port = process.argv[3] || 4040
 
 /**
@@ -58,4 +58,6 @@ http
   })
   .listen(parseInt(port, 10))
 
-console.log('Static file server running at\n  => http://localhost:' + port + '/\nCTRL + C to shutdown')
+console.log(
+  'Static file server running at\n  => http://localhost:' + port + '/\nCTRL + C to shutdown'
+)

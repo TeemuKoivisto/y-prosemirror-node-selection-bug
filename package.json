@@ -1,12 +1,36 @@
 {
   "private": true,
   "scripts": {
+    "build": "vite build",
+    "dev": "vite",
     "deploy:init": "git subtree push --prefix static origin gh-pages",
     "deploy": "git push origin `git subtree split --prefix static main`:gh-pages --force",
     "format": "prettier --write \"*.+(js|html|css|json|yml|yaml|ts|md|graphql|mdx)\" .",
     "start": "node serve.js"
   },
+  "engines": {
+    "node": ">=16",
+    "pnpm": "^7.0.0"
+  },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@types/katex": "^0.14.0",
+    "prettier": "^2.6.2",
+    "vite": "^3.0.5"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6.1.1",
+    "@codemirror/view": "^6.2.0",
+    "@popperjs/core": "^2.11.5",
+    "katex": "^0.16.0",
+    "prosemirror-dev-toolkit": "^1.0.1",
+    "prosemirror-example-setup": "^1.2.1",
+    "prosemirror-keymap": "^1.2.0",
+    "prosemirror-model": "^1.18.1",
+    "prosemirror-state": "^1.4.1",
+    "prosemirror-view": "^1.27.0",
+    "y-prosemirror": "^1.0.14",
+    "y-protocols": "^1.0.5",
+    "y-websocket": "^1.3.18",
+    "yjs": "^13.5.39"
   }
 }

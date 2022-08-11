@@ -1,0 +1,114 @@
+.popper {
+  color: #353535;
+  font-family: "PT Sans", sans-serif;
+  min-width: 100px;
+  position: absolute;
+  width: auto;
+  z-index: 5;
+  opacity: 1;
+}
+
+.popper[data-show] {
+  display: inline-block;
+}
+
+.popper-arrow,
+.popper-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.popper-arrow {
+  visibility: hidden;
+}
+
+.popper-arrow::before {
+  visibility: visible;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.popper[data-popper-placement^="bottom"] > .popper-arrow {
+  top: -5px;
+  left: calc(50% - 5px);
+  border-bottom-color: #e2e2e2;
+  border-top-width: 0;
+  margin: 0 5px;
+}
+
+.popper[data-popper-placement^="top"] > .popper-arrow {
+  bottom: -5px;
+  left: calc(50% - 5px);
+  border-top-color: #e2e2e2;
+  border-bottom-width: 0;
+  margin: 0 5px;
+}
+
+.popper[data-popper-placement^="left"] > .popper-arrow {
+  right: -5px;
+  top: calc(50% - 5px);
+  border-left-color: #e2e2e2;
+  border-right-width: 0;
+  margin: 5px 0;
+}
+
+.popper[data-popper-placement^="right"] > .popper-arrow {
+  left: -5px;
+  top: calc(50% - 5px);
+  border-right-color: #e2e2e2;
+  border-left-width: 0;
+  margin: 5px 0;
+}
+
+.popper .equation-editor {
+  position: relative;
+  min-width: 500px;
+  max-width: 800px;
+}
+
+/* .popper .cm-editor {
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 4px 9px 0 rgba(84, 83, 83, 0.3);
+  height: auto;
+  min-height: 4em;
+} */
+.popper .equation-editor:first-child {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 4px 9px 0 rgb(84 83 83 / 30%);
+  height: auto;
+  min-height: 4em;
+}
+
+.popper .equation-editor-info {
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  bottom: 6px;
+  color: #6e6e6e;
+  display: inline-flex;
+  cursor: pointer;
+  font-size: 12px;
+  height: 16px;
+  justify-content: center;
+  opacity: 0.5;
+  position: absolute;
+  right: 6px;
+  text-decoration: none;
+  width: 16px;
+  z-index: 2;
+}
+
+.popper .equation-editor-info:hover {
+  opacity: 1;
+}
+
+.popper .cm-scroller {
+  max-height: 400px;
+}
+
+.popper .cm-placeholder {
+  color: #999 !important;
+}
