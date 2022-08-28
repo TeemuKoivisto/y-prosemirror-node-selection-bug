@@ -10,6 +10,8 @@ import { PopperProvider } from './PopperProvider'
 import docJson from './doc.json'
 
 import 'katex/dist/katex.min.css'
+import 'prosemirror-example-setup/style/style.css'
+import 'prosemirror-menu/style/menu.css'
 import './index.css'
 import './prosemirror.css'
 import './popper.css'

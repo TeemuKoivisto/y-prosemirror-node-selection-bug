@@ -99,7 +99,6 @@ export class EquationView implements NodeView {
   }
 
   selectNode = async () => {
-    // const { basicSetup } = await import('codemirror')
     const { EditorView: CodeMirrorView } = await import('@codemirror/view')
     if (!this.codemirror) {
       this.codemirror = new CodeMirrorView({

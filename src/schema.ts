@@ -23,7 +23,7 @@ export const schema = new Schema({
       attrs: {
         id: { default: '' },
         label: { default: '' },
-        dataTracked: { default: null },
+        class: { default: 'placeholder' },
       },
       group: 'block',
       parseDOM: [
@@ -41,19 +41,16 @@ export const schema = new Schema({
         },
       ],
       toDOM: (node: PMNode) => {
-        return [
-          'div',
-          {
-            class: 'placeholder-item',
-            id: node.attrs.id,
-          },
-        ]
+        const attrs = {
+          id: node.attrs.id,
+          class: node.attrs.class,
+        }
+        return ['div', attrs, 0]
       },
     },
     figcaption: {
       content: 'inline*',
       group: 'block',
-      attrs: { dataTracked: { default: null } },
       isolating: true,
       selectable: false,
       parseDOM: [
@@ -70,7 +67,6 @@ export const schema = new Schema({
         class: { default: 'equation-wrapper' },
         suppressCaption: { default: true },
         suppressTitle: { default: undefined },
-        dataTracked: { default: null },
       },
       selectable: false,
       group: 'block element',
@@ -100,7 +96,6 @@ export const schema = new Schema({
         id: { default: '' },
         class: { default: 'equation' },
         TeXRepresentation: { default: '' },
-        dataTracked: { default: null },
       },
       group: 'block',
       parseDOM: [
